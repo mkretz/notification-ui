@@ -1,10 +1,13 @@
 import React from 'react';
 import {render} from 'react-dom';
+import {Router, Route, browserHistory, IndexRedirect} from 'react-router';
+import App from './app.jsx';
 
-let hello = (
-  <div>
-    Hello React!
-  </div>
+let routes = (
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+    </Route>
+  </Router>
 );
 
-render(hello, document.getElementById('app'));
+render(routes, document.getElementById('app'));
