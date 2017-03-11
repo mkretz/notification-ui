@@ -4,7 +4,7 @@ import './fonts/index.css';
 import {Router, Route, browserHistory, IndexRedirect} from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Notifications from './notifications.jsx';
+import Notifications from './notifications/notifications.jsx';
 
 injectTapEventPlugin();
 
