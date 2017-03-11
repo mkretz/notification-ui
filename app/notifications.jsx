@@ -1,14 +1,14 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 
-const App = () => (
+const Notifications = () => (
     <div>
         <AppBar title="Notifications"></AppBar>
     </div>
 )
 
-App.propTypes = {
+Notifications.propTypes = {
 
 };
 
-export default App;
+export default Notifications;
