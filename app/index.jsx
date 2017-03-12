@@ -6,7 +6,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import Notifications from './notifications/notifications.jsx';
+import NotificationsContainer from './notifications/notificationsContainer.jsx';
 import {routerMiddleware, syncHistoryWithStore } from 'react-router-redux';
 import reducer from './reducer.jsx';
 
@@ -27,7 +27,7 @@ let routes = (
   <Provider store={store}>
     <MuiThemeProvider>
       <Router history={browserHistory}>
-        <Route path="/" component={Notifications}>
+        <Route path="/" component={NotificationsContainer}>
         </Route>
       </Router>
     </MuiThemeProvider>

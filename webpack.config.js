@@ -13,9 +13,10 @@ var config = {
         path: __dirname + "/dist",
         filename: 'bundle.js'
     },
-    plugins: [new HtmlWebpackPlugin({
-      template: 'index.html'
-    })],
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: 'index.html'
+      })],
     module : {
         loaders : [
             {
