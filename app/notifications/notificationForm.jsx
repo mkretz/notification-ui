@@ -14,18 +14,27 @@ const textStyle = {
 const submitStyle = {
   margin: 30};
 
-const NotificationForm = () => (
-    <div>
-        <Paper style={createNotificationStyle} zDepth={1}>
-          <TextField
-            hintText="Enter notification text"
-            multiLine={true}
-            rowsMax={1}
-            style={textStyle}/>
-          <RaisedButton label="Submit" primary={true} style={submitStyle} />
-        </Paper>
-    </div>
-)
+export class NotificationForm extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {text: ''};
+    }
+
+    render() {
+      return (
+        <div>
+            <Paper style={createNotificationStyle} zDepth={1}>
+              <TextField
+                hintText="Enter notification text"
+                multiLine={true}
+                rowsMax={1}
+                style={textStyle}/>
+              <RaisedButton label="Submit" primary={true} style={submitStyle} />
+            </Paper>
+        </div>
+      )
+    }
+}
 
 NotificationForm.propTypes = {
 
