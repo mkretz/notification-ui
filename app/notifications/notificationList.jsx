@@ -1,8 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import {List, ListItem} from 'material-ui/List';
-import Divider from 'material-ui/Divider';
-import ActionGrade from 'material-ui/svg-icons/action/grade';
+import {List} from 'material-ui/List';
+import NotificationElement from './notificationElement.jsx';
 
 const notificationListStyle = {
   margin: '10 10 10 0',
@@ -13,7 +12,7 @@ const notificationListStyle = {
 const NotificationList = ({notifications}) => (
     <Paper style={notificationListStyle} zDepth={1}>
       <List>
-        {notifications.map(notification => <div key={notification.id}><ListItem primaryText={notification.text} leftIcon={<ActionGrade />} /> <Divider /></div>)}
+        {notifications.map(notification => <NotificationElement key={notification.id} notification={notification} />)}
       </List>
     </Paper>
 )
