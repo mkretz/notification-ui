@@ -5,12 +5,12 @@ import ActionGrade from 'material-ui/svg-icons/action/grade';
 import IconButton from 'material-ui/IconButton';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 
-const NotificationElement = ({notification}) => (
+const NotificationElement = ({notification, onDismiss}) => (
   <div>
     <ListItem
       primaryText={notification.text}
       leftIcon={<ActionGrade />}
-      rightIconButton={<IconButton tooltip="dismiss"><ActionDelete /></IconButton>}/>
+      rightIconButton={<IconButton onClick={() => onDismiss(notification)} tooltip="dismiss"><ActionDelete /></IconButton>}/>
     <Divider />
   </div>
 )

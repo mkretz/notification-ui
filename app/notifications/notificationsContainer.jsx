@@ -2,15 +2,17 @@ import { connect } from 'react-redux';
 import Notifications from './notifications.jsx';
 import {createNotification, dismissNotification} from './notificationActions.jsx';
 
+const getVisibleNotifications = (notifications) => (notifications ? notifications.filter((n) => n.visible) : undefined);
+
 const mapStateToProps = (state) => {
     return {
-        notifications: state.notifications.notifications
+        notifications: getVisibleNotifications(state.notifications.notifications)
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onDismissButtonClick: (notification) => {
+        dismissNotification: (notification) => {
             dispatch(dismissNotification(notification.id))
         },
         addNotification: (text) => {

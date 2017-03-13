@@ -15,5 +15,5 @@ export function createNotification(text) {
 }
 
 export function dismissNotification(id) {
-    return { type: CHANGE_VISIBILTY_FILTER, id};
+    return { type: DISMISS_NOTIFICATION, id};
 }

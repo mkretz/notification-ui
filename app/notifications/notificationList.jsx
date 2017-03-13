@@ -9,10 +9,10 @@ const notificationListStyle = {
   width: '100%'
 };
 
-const NotificationList = ({notifications}) => (
+const NotificationList = ({notifications, onDismiss}) => (
     <Paper style={notificationListStyle} zDepth={1}>
       <List>
-        {notifications.map(notification => <NotificationElement key={notification.id} notification={notification} />)}
+        {notifications.map(notification => <NotificationElement onDismiss={onDismiss} key={notification.id} notification={notification} />)}
       </List>
     </Paper>
 )
