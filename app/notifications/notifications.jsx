@@ -6,11 +6,11 @@ import RaisedButton from 'material-ui/RaisedButton';
 import NotificationList from './notificationList.jsx';
 import NotificationForm from './notificationForm.jsx';
 
-const Notifications = ({notifications}) => (
+const Notifications = ({notifications, addNotification}) => (
     <div>
         <AppBar title="Notifications"></AppBar>
         <NotificationList notifications={notifications}/>
-        <NotificationForm />
+        <NotificationForm addNotification={addNotification}/>
     </div>
 )
 

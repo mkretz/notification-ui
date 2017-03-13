@@ -13,7 +13,7 @@ const mapDispatchToProps = (dispatch) => {
         onDismissButtonClick: (notification) => {
             dispatch(dismissNotification(notification.id))
         },
-        createResource: (text) => {
+        addNotification: (text) => {
             dispatch(createNotification(text))
         }
     }
