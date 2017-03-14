@@ -59,7 +59,7 @@ export class NotificationForm extends React.Component {
                 value={this.state.text}
                 onChange={this.handleTextChange}/>
               <RaisedButton disabled={!this.textValid()} onClick={this.handleSubmit} label="Submit" primary={true} style={submitStyle} />
-              <RaisedButton disabled={!this.textValid()} onClick={this.handleEcho} label="Echo" primary={true} style={submitStyle} />
+              <RaisedButton disabled={!this.textValid() || !this.props.echoEnabled} onClick={this.handleEcho} label="Echo" primary={true} style={submitStyle} />
             </Paper>
         </div>
       )
