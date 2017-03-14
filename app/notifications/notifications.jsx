@@ -6,11 +6,11 @@ import RaisedButton from 'material-ui/RaisedButton';
 import NotificationList from './notificationList.jsx';
 import NotificationForm from './notificationForm.jsx';
 
-const Notifications = ({notifications, addNotification, dismissNotification}) => (
+const Notifications = ({notifications, addNotification, dismissNotification, subscribeNotifications, echoNotification}) => (
     <div>
         <AppBar title="Notifications" iconElementRight={<Badge badgeContent={notifications.length} secondary={true}><NotificationsIcon /></Badge>}></AppBar>
         <NotificationList notifications={notifications} onDismiss={dismissNotification}/>
-        <NotificationForm addNotification={addNotification}/>
+        <NotificationForm addNotification={addNotification} subscribeNotifications={subscribeNotifications} echoNotification={echoNotification}/>
     </div>
 )
 

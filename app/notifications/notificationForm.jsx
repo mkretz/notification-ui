@@ -8,7 +8,7 @@ const createNotificationStyle = {
   width: '100%'};
 
 const textStyle = {
-  width: '80%',
+  width: '70%',
   margin: 30};
 
 const submitStyle = {
@@ -21,6 +21,11 @@ export class NotificationForm extends React.Component {
       this.handleTextChange = this.handleTextChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       this.textValid = this.textValid.bind(this);
+      this.handleEcho = this.handleEcho.bind(this);
+    }
+
+    componentWillMount(){
+        this.props.subscribeNotifications();
     }
 
     handleTextChange(e) {
@@ -31,6 +36,12 @@ export class NotificationForm extends React.Component {
       this.props.addNotification(this.state.text);
       this.setState({text: ''});
     }
+
+    handleEcho() {
+      this.props.echoNotification(this.state.text);
+      this.setState({text: ''});
+    }
+
 
     textValid() {
         return this.state.text && this.state.text.length;
@@ -48,6 +59,7 @@ export class NotificationForm extends React.Component {
                 value={this.state.text}
                 onChange={this.handleTextChange}/>
               <RaisedButton disabled={!this.textValid()} onClick={this.handleSubmit} label="Submit" primary={true} style={submitStyle} />
+              <RaisedButton disabled={!this.textValid()} onClick={this.handleEcho} label="Echo" primary={true} style={submitStyle} />
             </Paper>
         </div>
       )

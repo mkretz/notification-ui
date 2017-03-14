@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Notifications from './notifications.jsx';
-import {createNotification, dismissNotification} from './notificationActions.jsx';
+import {createNotification, dismissNotification, subscribeToUpdates, echoNotification} from './notificationActions.jsx';
 
 const getVisibleNotifications = (notifications) => (notifications ? notifications.filter((n) => n.visible) : undefined);
 
@@ -17,7 +17,14 @@ const mapDispatchToProps = (dispatch) => {
         },
         addNotification: (text) => {
             dispatch(createNotification(text))
+        },
+        subscribeNotifications: () => {
+            dispatch(subscribeToUpdates())
+        },
+        echoNotification: (text) => {
+            dispatch(echoNotification(text))
         }
+
     }
 };
 

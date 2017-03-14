@@ -42,10 +42,6 @@ var config = {
                 loader: 'file-loader?name=app/fonts/[name].[ext]'
             },
             {
-                test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
                 test: /\.yml$/,
                 loader: "file-loader?name=assets/i18n/[path][name].json&context=./assets/i18n/!yaml",
             }
