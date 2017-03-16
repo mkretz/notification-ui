@@ -7,6 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import HeaderContainer from './header/headerContainer.jsx';
 import NotificationsContainer from './notifications/notificationsContainer.jsx';
 import {routerMiddleware, syncHistoryWithStore } from 'react-router-redux';
 import io from 'socket.io-client';
@@ -32,7 +33,9 @@ let routes = (
   <Provider store={store}>
     <MuiThemeProvider>
       <Router history={browserHistory}>
-        <Route path="/" component={NotificationsContainer}>
+        <Route path="/" component={HeaderContainer}>
+          <Route path="notification" component={NotificationsContainer}>
+          </Route>
         </Route>
       </Router>
     </MuiThemeProvider>
