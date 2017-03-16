@@ -16,7 +16,8 @@ const NotificationElement = ({notification, onDismiss}) => (
 )
 
 NotificationElement.propTypes = {
-
+  notification: React.PropTypes.object,
+  onDismiss: React.PropTypes.func
 };
 
 export default NotificationElement;

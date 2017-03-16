@@ -11,7 +11,12 @@ const Notifications = ({notifications, addNotification, dismissNotification, sub
 )
 
 Notifications.propTypes = {
-
+  notifications: React.PropTypes.array,
+  addNotification: React.PropTypes.func,
+  dismissNotification: React.PropTypes.func,
+  subscribeNotifications: React.PropTypes.func,
+  echoEnabled: React.PropTypes.bool,
+  echoNotification: React.PropTypes.func
 };
 
 export default Notifications;

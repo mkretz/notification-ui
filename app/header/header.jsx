@@ -11,7 +11,8 @@ const Header = ({children, notifications}) => (
 )
 
 Header.propTypes = {
-
+  children: React.PropTypes.array,
+  notifications: React.PropTypes.array
 };
 
 export default Header;

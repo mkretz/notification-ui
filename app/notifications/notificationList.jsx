@@ -18,7 +18,8 @@ const NotificationList = ({notifications, onDismiss}) => (
 )
 
 NotificationList.propTypes = {
-
+  notifications: React.PropTypes.array,
+  onDismiss: React.PropTypes.func
 };
 
 export default NotificationList;

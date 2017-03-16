@@ -34,6 +34,7 @@ let routes = (
     <MuiThemeProvider>
       <Router history={browserHistory}>
         <Route path="/" component={HeaderContainer}>
+          <IndexRedirect to="notification" />
           <Route path="notification" component={NotificationsContainer}>
           </Route>
         </Route>

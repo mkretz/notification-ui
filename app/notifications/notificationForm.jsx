@@ -67,7 +67,9 @@ export class NotificationForm extends React.Component {
 }
 
 NotificationForm.propTypes = {
-
+  subscribeNotifications: React.PropTypes.func,
+  addNotification: React.PropTypes.func,
+  echoNotification: React.PropTypes.func
 };
 
 export default NotificationForm;
