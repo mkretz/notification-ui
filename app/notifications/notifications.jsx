@@ -11,12 +11,17 @@ const Notifications = ({notifications, addNotification, dismissNotification, sub
 )
 
 Notifications.propTypes = {
-  notifications: React.PropTypes.array,
-  addNotification: React.PropTypes.func,
-  dismissNotification: React.PropTypes.func,
-  subscribeNotifications: React.PropTypes.func,
-  echoEnabled: React.PropTypes.bool,
-  echoNotification: React.PropTypes.func
+  notifications: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      text: React.PropTypes.string,
+      visible: React.PropTypes.bool
+    })
+  ).isRequired,
+  addNotification: React.PropTypes.func.isRequired,
+  dismissNotification: React.PropTypes.func.isRequired,
+  subscribeNotifications: React.PropTypes.func.isRequired,
+  echoEnabled: React.PropTypes.bool.isRequired,
+  echoNotification: React.PropTypes.func.isRequired
 };
 
 export default Notifications;

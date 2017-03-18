@@ -16,8 +16,11 @@ const NotificationElement = ({notification, onDismiss}) => (
 )
 
 NotificationElement.propTypes = {
-  notification: React.PropTypes.object,
-  onDismiss: React.PropTypes.func
+  notification: React.PropTypes.shape({
+    text: React.PropTypes.string,
+    visible: React.PropTypes.bool
+  }).isRequired,
+  onDismiss: React.PropTypes.func.isRequired
 };
 
 export default NotificationElement;

@@ -11,7 +11,7 @@ const Header = ({children, notifications}) => (
 )
 
 Header.propTypes = {
-  children: React.PropTypes.array,
+  children: React.PropTypes.object,
   notifications: React.PropTypes.array
 };
 
