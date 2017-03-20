@@ -1,0 +1,6 @@
+---
+applications:
+- name: react-intro-app
+  memory: 64MB
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  path: dist

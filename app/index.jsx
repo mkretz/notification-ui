@@ -13,7 +13,7 @@ import {routerMiddleware, syncHistoryWithStore } from 'react-router-redux';
 import io from 'socket.io-client';
 import reducer from './reducer.jsx';
 
-const socket = io.connect('http://localhost:3000');
+const socket = io.connect('https://socketio-echo.scapp.io');
 
 injectTapEventPlugin();
 
