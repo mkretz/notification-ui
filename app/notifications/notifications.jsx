@@ -6,7 +6,7 @@ import NotificationForm from './notificationForm.jsx';
 const Notifications = ({notifications, addNotification, dismissNotification, subscribeNotifications, echoEnabled, echoNotification}) => (
     <div>
         <NotificationList notifications={notifications} onDismiss={dismissNotification}/>
-        <NotificationForm addNotification={addNotification} subscribeNotifications={subscribeNotifications} echoNotification={echoNotification} echoEnabled={echoEnabled}/>
+        <NotificationForm addNotification={addNotification}/>
     </div>
 )
 
@@ -19,9 +19,6 @@ Notifications.propTypes = {
   ).isRequired,
   addNotification: React.PropTypes.func.isRequired,
   dismissNotification: React.PropTypes.func.isRequired,
-  subscribeNotifications: React.PropTypes.func.isRequired,
-  echoEnabled: React.PropTypes.bool.isRequired,
-  echoNotification: React.PropTypes.func.isRequired
 };
 
 export default Notifications;
