@@ -1,6 +1,8 @@
 ---
 applications:
-- name: react-intro-app
+- name: notification-ui
+  env:
+    APP_CONFIG: '{"backendBaseUrl": "https://notification-api.scapp.io"}'
   memory: 64MB
   buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
   path: dist
