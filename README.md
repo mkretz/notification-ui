@@ -1,2 +1,2 @@
-# react-intro-app
-An app introducing some basic concepts of React and related technologies
+# notification-ui
+An app for showing the capabilities of Cloud Foundry. This is the UI component.
