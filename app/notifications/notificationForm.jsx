@@ -31,7 +31,7 @@ export class NotificationForm extends React.Component {
     }
 
     handleSubmit() {
-      this.props.addNotification(this.state.text);
+      this.props.addNotification(this.props.backendBaseUrl,this.state.text);
       this.setState({text: ''});
     }
 

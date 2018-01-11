@@ -5,7 +5,7 @@ const getVisibleNotifications = (notifications) => (notifications ? notification
 
 const mapStateToProps = (state) => {
     return {
-        notifications: getVisibleNotifications(state.notifications.notifications)
+        notifications: state.notifications.notifications
     }
 };
 

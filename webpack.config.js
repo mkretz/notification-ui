@@ -48,7 +48,13 @@ var config = {
         ]
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        proxy: {
+            '/config/conf.json': {
+                ignorePath : true,
+                secure: false
+            }
+        }
     }
 };
 

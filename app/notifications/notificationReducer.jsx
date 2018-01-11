@@ -1,23 +1,20 @@
-import {CREATE_NOTIFICATION, DISMISS_NOTIFICATION,} from './notificationActions.jsx';
-import uuid from 'uuid';
+import {RECEIVE_BACKEND_URL, RECEIVE_NOTIFICATIONS} from './notificationActions.jsx';
 
 const initialState = {
-  notifications: [
-      {id: uuid(), text: 'This is a first notification', visible: true},
-      {id: uuid(), text: 'This is a second one', visible: true},
-  ],
+  backendBaseUrl: undefined,
+  notifications: [],
   echoFeature: false
 };
 
 export default function notifications(state = initialState, action) {
     switch (action.type) {
-        case CREATE_NOTIFICATION:
+        case RECEIVE_BACKEND_URL:
             return Object.assign({}, state, {
-                notifications: [...state.notifications, {text: action.text, id: uuid(), visible: true}]
+                backendBaseUrl: action.data.backendBaseUrl
             });
-        case DISMISS_NOTIFICATION:
+        case RECEIVE_NOTIFICATIONS:
             return Object.assign({}, state, {
-                notifications: state.notifications.map((notification) => (notification.id === action.id ? {text: notification.text, id: notification.id, visible: false} : notification))
+                notifications: action.data
             });
         default:
             return state;
