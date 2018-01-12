@@ -17,6 +17,9 @@ npm install
 npm run build:prd
 ```
 5. Adapt the environment variable `APP_CONFIG` in `manifest.yml` to point to the base URL of [notification-api](https://github.com/mkretz/notification-api)
+
+4. If required, adapt the `name` attribute in `manifest.yml` to change the app's name.
+
 6. Push the app
 ```
 cf push
