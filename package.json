@@ -8,7 +8,7 @@
     "build": "webpack",
     "run:dev": "webpack-dev-server -d --config ./webpack-dev.config.js --history-api-fallback --hot --inline --progress --colors --content-base .",
     "build:dev": "webpack -d --config ./webpack-dev.config.js --display-modules --progress",
-    "build:prd": "webpack --config ./webpack-prd.config.js --display-modules --progress"
+    "build:prd": "webpack --config ./webpack-prd.config.js --display-modules --progress && cp ./nginx.conf ./dist"
   },
   "repository": {
     "type": "git",
