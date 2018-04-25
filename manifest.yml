@@ -6,3 +6,5 @@ applications:
   memory: 64MB
   buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
   path: dist
+  routes:
+  - route: notification-ui.scapp.io

@@ -1,7 +1,7 @@
 {
-  "name": "react-intro-app",
-  "version": "1.0.0",
-  "description": "An app introducing some basic concepts of React and related technologies",
+  "name": "notification-ui",
+  "version": "1.0.1",
+  "description": "CF sample application UI",
   "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mkretz/react-intro-app.git"
+    "url": "git+https://github.com/mkretz/notification-ui.git"
   },
   "keywords": [
     "react"
@@ -20,9 +20,9 @@
   "author": "Mathis Kretz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mkretz/react-intro-app/issues"
+    "url": "https://github.com/mkretz/notification-ui/issues"
   },
-  "homepage": "https://github.com/mkretz/react-intro-app#readme",
+  "homepage": "https://github.com/mkretz/notification-ui#readme",
   "dependencies": {
     "material-ui": "^0.17.0",
     "react": "^15.4.2",
